@@ -5,7 +5,7 @@
     android:background="@android:color/white">
 
     <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart1"
+        android:id="@+id/line_chart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -23,20 +23,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Utils.init(this);
-
-        mChart = (LineChart) findViewById(R.id.chart1);
-        // no description text
-        mChart.getDescription().setEnabled(false);
-
-        mChart.getAxisLeft().setDrawGridLines(false);
-        mChart.getAxisRight().setEnabled(false);
-        mChart.getXAxis().setDrawGridLines(true);
-        mChart.getXAxis().setDrawAxisLine(false);
-
-        setData(1000, 500f);
-        // dont forget to refresh the drawing
-        mChart.invalidate();
+        mChart = (LineChart) findViewById(R.id.line_chart);//初始化对应的Chart控件
+        setData(1000, 500f);//给图表设置数据
+        mChart.invalidate();//刷新
     }
 
     private void setData(int count, float range) {
@@ -58,8 +47,6 @@ public class MainActivity extends Activity {
         set1.setLineWidth(0.5f);
         set1.setDrawValues(false);
         set1.setDrawCircles(false);
-//        set1.setMode(LineDataSet.Mode.LINEAR);
-//        set1.setDrawFilled(false);
 
         // create a data object with the datasets
         LineData data = new LineData(set1);
