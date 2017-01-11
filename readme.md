@@ -25,16 +25,18 @@
     compile 'com.github.open-android:MPAndroidChart:v3.0.1'
 
 
-### 3.调用功能绘制图表
+### 3.清单文件添加权限
 
-##### 3.1布局文件使用
+   	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+### 4.布局文件使用
 
  	<com.github.mikephil.charting.charts.LineChart
         android:id="@+id/line_chart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-#### 3.2 Activity中初始化
+### 5.Activity中初始化
 
     mChart = (LineChart) findViewById(R.id.line_chart);//初始化对应的Chart控件
 	//省略部分代码，具体请参考MPChartExample例子实现想要的效果
